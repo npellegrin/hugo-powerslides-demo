@@ -21,16 +21,61 @@ Briefly introduce Hugo PowerSlides and explain that the presentation is written 
 
 # Features
 
-<ul>
-  <li class="anim-fade">Keyboard and clicker navigation</li>
-  <li class="anim-up">Presenter mode with synchronized speaker notes</li>
-  <li class="anim-zoom">Ready-made layouts and thirteen transitions</li>
-  <li class="anim-fade">Styled code, tables, quotes, and callouts</li>
-  <li class="anim-up">Color themes driven by CSS custom properties</li>
-</ul>
+{{< fragments >}}
+- Keyboard, clicker, and swipe navigation
+- Step-by-step reveals
+- Presenter mode with timer, next slide, and notes
+- Ready-made layouts and thirteen transitions
+- Color themes driven by CSS custom properties
+- PDF export from the browser
+{{< /fragments >}}
 
 {{< notes >}}
-Explain each feature briefly. Arrow keys, Page Up and Page Down, Space, Home, and End navigate; F toggles fullscreen; P opens presenter mode.
+Each item appears on the next key press. In this window, upcoming items are shown faded.
+{{< /notes >}}
+
+---
+
+{{< slide id="navigation" transition="slide" >}}
+
+# Navigation
+
+| Keys                                      | Action                     |
+| ----------------------------------------- | -------------------------- |
+| <kbd>→</kbd> <kbd>Space</kbd> <kbd>Page Down</kbd> | Next step or slide  |
+| <kbd>←</kbd> <kbd>Page Up</kbd>           | Previous step or slide     |
+| <kbd>Home</kbd> <kbd>End</kbd>            | First or last slide        |
+| <kbd>1</kbd> <kbd>2</kbd> … <kbd>Enter</kbd> | Go to slide number      |
+| <kbd>O</kbd> or <kbd>Esc</kbd>            | Overview of all slides     |
+| <kbd>F</kbd>                              | Fullscreen                 |
+| <kbd>P</kbd>                              | Presenter window           |
+
+On touch screens, swipe left or right.
+
+---
+
+{{< slide id="fragments" transition="slide" >}}
+
+# Step-by-step reveals
+
+{{< fragments style="zoom" >}}
+- Wrap content in `fragments`
+- Each item is one step
+- Styles: `up`, `fade`, `zoom`, `highlight`
+{{< /fragments >}}
+
+```markdown
+{{</* fragments style="zoom" */>}}
+- Each item is one step
+{{</* /fragments */>}}
+```
+
+{{< fragments style="highlight" >}}
+Going back shows every step of the previous slide.
+{{< /fragments >}}
+
+{{< notes >}}
+Any element with the `fragment` class also becomes a step, for example `<p class="fragment">`.
 {{< /notes >}}
 
 ---
@@ -60,10 +105,6 @@ Section slides are numbered automatically, in order of appearance.
 | `hero`        | Full-bleed image with a big message |      Yes      |
 | `image-left`  | Image on the left, text on the right |     Yes      |
 | `image-right` | Text on the left, image on the right |     Yes      |
-
-```markdown
-{{</* slide layout="image-left" image="/images/landscape.svg" alt="..." */>}}
-```
 
 ---
 
@@ -459,9 +500,9 @@ For fonts or anything else, add stylesheets with `customCSS`.
 
 {{< slide id="animations" transition="slide" >}}
 
-# Animations
+# Entrance animations
 
-Animate items with simple CSS classes:
+These play automatically when the slide appears:
 
 <ul>
   <li class="anim-fade">Fade animation</li>
@@ -496,6 +537,35 @@ They remain synchronized with the current slide.
 {{< notes >}}
 Demonstrate how speaker notes can be used during a presentation without appearing on the slides.
 {{< /notes >}}
+
+---
+
+{{< slide id="presenter" transition="fade" >}}
+
+# Presenter mode
+
+Press <kbd>P</kbd> to open the presenter window. It stays in sync with the audience window and shows:
+
+- the current slide, with upcoming steps faded;
+- the next slide;
+- speaker notes;
+- elapsed time, which can be paused or reset, and the clock.
+
+---
+
+{{< slide id="pdf" transition="fade" >}}
+
+# Export to PDF
+
+Print the presentation from the browser (<kbd>Ctrl</kbd> <kbd>P</kbd>) and choose **Save as PDF**:
+
+- one page per slide, at the slide size;
+- every step shown;
+- controls and notes hidden.
+
+{{< callout type="tip" >}}
+Enable **Background graphics** in the print dialog if your browser asks. Chromium-based browsers give the best results.
+{{< /callout >}}
 
 ---
 
