@@ -1,0 +1,6 @@
+languageCode = "fr"
+title = "Power Slides Demo"
+
+[module]
+  [[module.imports]]
+    path = "github.com/npellegrin/hugo-powerslides"
