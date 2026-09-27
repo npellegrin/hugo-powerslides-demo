@@ -4,7 +4,7 @@ A demonstration site for the [`hugo-powerslides`](https://github.com/npellegrin/
 
 ## Requirements
 
-- Hugo 0.123.0 or later (standard edition)
+- Hugo 0.166.0 or later (standard edition)
 - Go
 - Git
 
