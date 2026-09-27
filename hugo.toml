@@ -24,6 +24,7 @@ title = "Power Slides Demo"
   theme = "dark"
   transition = "fade"
   progress = true
+  favicon = "/images/logo.svg"
 
   # The Content-Security-Policy is on by default; list the origins the slides embed.
   [params.powerslides.csp]
