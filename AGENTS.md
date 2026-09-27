@@ -7,6 +7,11 @@
 - For shared theme behavior or styling, edit `../hugo-powerslides` instead of duplicating its templates or assets here.
 - Write all project-authored material in English, including code comments, documentation, slide content, and user-facing text, unless explicitly asked otherwise.
 
+## Code Quality
+
+- Code and content must stay clean and readable by humans: agents are at the service of humans. Favor clarity over cleverness.
+- Keep configuration and content simple enough that a maintainer can understand and change them without an agent.
+
 ## Efficient Work
 
 - Keep investigation and responses concise. Read only the files needed to understand the change; avoid repeated searches, rereads, and restating context.
