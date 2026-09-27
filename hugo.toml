@@ -9,13 +9,25 @@ title = "Power Slides Demo"
 [markup.goldmark.renderer]
   unsafe = true
 
+# Emit CSS classes instead of inline colors, so code follows the theme palette.
 [markup.highlight]
-  style = "github-dark"
+  noClasses = false
+
+# Leaves LaTeX untouched for KaTeX, which renders it in the browser.
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['\[', '\]'], ['$$', '$$']]
+    inline = [['\(', '\)']]
 
 [params.powerslides]
   theme = "dark"
   transition = "fade"
   progress = true
+
+  [params.powerslides.footer]
+    text = "Hugo PowerSlides · Demo"
+    logo = "/images/logo.svg"
 
   # Any token can be overridden here, for example:
   # [params.powerslides.colors]

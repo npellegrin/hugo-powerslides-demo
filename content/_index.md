@@ -141,7 +141,22 @@ Use `alt` to describe meaningful images.
 
 ---
 
-{{< slide id="quote" layout="center" transition="fade" >}}
+{{< slide id="background" background-image="/images/landscape.svg" transition="fade" >}}
+
+# Backgrounds
+
+Any slide can have a background image or color:
+
+```markdown
+{{</* slide background-image="/images/landscape.svg" background-dim="0.75" */>}}
+{{</* slide background="#312e81" theme="synthwave" */>}}
+```
+
+The image is tinted with the theme background, so text stays readable.
+
+---
+
+{{< slide id="quote" layout="center" background="#312e81" theme="synthwave" transition="fade" >}}
 
 > Simplicity is prerequisite for reliability.
 
@@ -194,19 +209,19 @@ Code, tables, quotes, and callouts, styled out of the box.
 
 # Code
 
-Fenced blocks are highlighted by Hugo; inline `code` gets a subtle background.
+Colors follow the slide theme. Highlight lines with `hl_lines`:
 
-```js
+```js {hl_lines=[2]}
 function goNext() {
   render(currentIndex + 1);
 }
 ```
 
-Set the highlighting style in `hugo.toml`:
+This requires classes instead of inline colors in `hugo.toml`:
 
 ```toml
 [markup.highlight]
-  style = "github-dark"
+  noClasses = false
 ```
 
 ---
@@ -255,6 +270,56 @@ Each type has its own icon and title, not just a color.
 {{< callout type="warning" >}}
 Something to be careful about.
 {{< /callout >}}
+
+---
+
+{{< slide id="math" transition="up" >}}
+
+# Math
+
+KaTeX renders formulas, inline like \(e^{i\pi} + 1 = 0\) or as blocks:
+
+$$
+\int_0^1 x^2 \, dx = \frac{1}{3}
+$$
+
+It loads only when a page contains math, from a pinned version checked with Subresource Integrity.
+
+{{< notes >}}
+Math needs the Goldmark passthrough extension in `hugo.toml`, so that Markdown leaves the LaTeX untouched.
+{{< /notes >}}
+
+---
+
+{{< slide id="diagrams" transition="up" >}}
+
+# Diagrams
+
+```mermaid
+flowchart LR
+  A[Markdown] --> B[Hugo]
+  B --> C[Slides]
+  C --> D[PDF]
+```
+
+A `mermaid` code block becomes a diagram in the slide's theme colors.
+
+---
+
+{{< slide id="media" transition="up" >}}
+
+# Video and embeds
+
+{{< embed src="https://www.openstreetmap.org/export/embed.html?bbox=2.29%2C48.85%2C2.30%2C48.86&layer=mapnik" title="Map of the area around the Eiffel Tower" >}}
+
+```markdown
+{{</* video src="/videos/demo.mp4" autoplay="true" loop="true" */>}}
+{{</* embed src="https://…" title="…" ratio="4/3" */>}}
+```
+
+{{< notes >}}
+Autoplay videos start muted when the slide appears and pause when it is left. Embeds load only when their slide is current or next.
+{{< /notes >}}
 
 ---
 
