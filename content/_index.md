@@ -323,6 +323,24 @@ Autoplay videos start muted when the slide appears and pause when it is left. Em
 
 ---
 
+{{< slide id="separators" transition="up" >}}
+
+# Separators and footnotes
+
+`---` on its own line, after a blank line, starts a new slide. To draw a line inside a slide:
+
+{{< rule >}}
+
+```markdown
+{{</* rule */>}}
+```
+
+Footnotes[^footnotes] appear at the bottom of the slide that cites them.
+
+[^footnotes]: Like this one.
+
+---
+
 {{< slide id="figure" transition="zoom" >}}
 
 # Figure shortcode

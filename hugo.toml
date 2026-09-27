@@ -25,6 +25,10 @@ title = "Power Slides Demo"
   transition = "fade"
   progress = true
 
+  # The Content-Security-Policy is on by default; list the origins the slides embed.
+  [params.powerslides.csp]
+    frameSrc = ["https://www.openstreetmap.org"]
+
   [params.powerslides.footer]
     text = "Hugo PowerSlides · Demo"
     logo = "/images/logo.svg"
