@@ -395,7 +395,7 @@ The next slides demonstrate each transition. They all fall back to a short fade 
 
 ---
 
-{{< slide id="transition-slide" transition="slide" >}}
+{{< slide id="transition-slide" transition="slide" background="#1e3a5f" >}}
 
 # `slide`
 
@@ -403,7 +403,7 @@ Slides in horizontally, following the navigation direction.
 
 ---
 
-{{< slide id="transition-up" transition="up" >}}
+{{< slide id="transition-up" transition="up" background="#134e4a" >}}
 
 # `up`
 
@@ -411,7 +411,7 @@ Moves upward into view.
 
 ---
 
-{{< slide id="transition-zoom" transition="zoom" >}}
+{{< slide id="transition-zoom" transition="zoom" background="#3b2f5c" >}}
 
 # `zoom`
 
@@ -419,7 +419,7 @@ Zooms in and out.
 
 ---
 
-{{< slide id="transition-blur" transition="blur" >}}
+{{< slide id="transition-blur" transition="blur" background="#4a3441" >}}
 
 # `blur`
 
@@ -427,7 +427,7 @@ Comes into focus.
 
 ---
 
-{{< slide id="transition-push" transition="push" >}}
+{{< slide id="transition-push" transition="push" background="#3f4a2e" >}}
 
 # `push`
 
@@ -435,7 +435,7 @@ Pushes the previous slide out of the way.
 
 ---
 
-{{< slide id="transition-flip" transition="flip" >}}
+{{< slide id="transition-flip" transition="flip" background="#5b3a29" >}}
 
 # `flip`
 
@@ -443,7 +443,7 @@ Turns like a card.
 
 ---
 
-{{< slide id="transition-wipe" transition="wipe" >}}
+{{< slide id="transition-wipe" transition="wipe" background="#334155" >}}
 
 # `wipe`
 
@@ -451,7 +451,7 @@ Reveals itself from the side.
 
 ---
 
-{{< slide id="transition-iris" transition="iris" >}}
+{{< slide id="transition-iris" transition="iris" background="#52431f" >}}
 
 # `iris`
 
@@ -467,7 +467,7 @@ Breaking news! The newspaper spin is back.
 
 ---
 
-{{< slide id="transition-bounce" layout="center" transition="bounce" theme="synthwave" >}}
+{{< slide id="transition-bounce" layout="center" transition="bounce" theme="synthwave" background="#3a1244" >}}
 
 # `bounce`
 
@@ -475,7 +475,7 @@ Drops in with a bounce.
 
 ---
 
-{{< slide id="transition-swing" layout="center" transition="swing" theme="synthwave" >}}
+{{< slide id="transition-swing" layout="center" transition="swing" theme="synthwave" background="#112a4a" >}}
 
 # `swing`
 
