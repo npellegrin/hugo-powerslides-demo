@@ -4,3 +4,20 @@ title = "Power Slides Demo"
 [module]
   [[module.imports]]
     path = "github.com/npellegrin/hugo-powerslides"
+
+# Markup settings are site-level only: Hugo does not merge them from themes.
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  style = "github-dark"
+
+[params.powerslides]
+  theme = "dark"
+  transition = "fade"
+  progress = true
+
+  # Any token can be overridden here, for example:
+  # [params.powerslides.colors]
+  #   primary = "#34d399"
+  #   on-primary = "#022c22"
