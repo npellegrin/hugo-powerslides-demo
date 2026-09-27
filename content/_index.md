@@ -9,7 +9,7 @@ layout: "slides"
 
 ## A Markdown slide system for Hugo
 
-Lightweight, static, and easy to theme.
+Static slide decks with themes, presenter mode, and PDF export.
 
 {{< notes >}}
 Briefly introduce Hugo PowerSlides and explain that the presentation is written entirely in Markdown.

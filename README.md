@@ -1,10 +1,10 @@
 # Hugo PowerSlides Demo
 
-A demonstration site for the [`hugo-powerslides`](https://github.com/npellegrin/hugo-powerslides) Hugo theme.
+A demonstration site for the [`hugo-powerslides`](https://github.com/npellegrin/hugo-powerslides) Hugo theme, published at <https://npellegrin.github.io/hugo-powerslides-demo/>.
 
 ## Requirements
 
-- Hugo Extended
+- Hugo 0.123.0 or later (standard edition)
 - Go
 - Git
 
@@ -47,3 +47,9 @@ hugo server
 ```
 
 When using local file with `replace` directive, changes made in the local `hugo-powerslides` repository are automatically used by the demo.
+
+## Deployment
+
+`.github/workflows/deploy.yml` publishes the demo to GitHub Pages on every push to `main`. It checks out the theme next to the demo, as `go.mod` expects, and builds with a pinned Hugo version whose checksum is verified.
+
+To enable it once, in the repository settings: **Pages → Build and deployment → Source: GitHub Actions**.
